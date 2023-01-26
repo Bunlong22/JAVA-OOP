@@ -1,6 +1,8 @@
 public class Ex1 {
     public static void main(String[] args ){
-        System.out.println("Hello");
-        System.out.println("Sok Sabay");
+        int x =1;
+        if (x>0 && x<10){
+            System.out.println("true");
+        }
     }
 }
