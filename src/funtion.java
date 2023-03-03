@@ -1,15 +1,25 @@
-public class funtion {
-
-
-    public static void helloWorld(){
-        System.out.println("Function!");
-    }
-    public static void main(String[] args){
-        helloWorld();
+class Parent {
+    void show()
+    {
+        System.out.println("Parent's show()");
     }
 }
-//Parameters are empty shells in the method.
-// Parameters allow you to contain external data into a specific function or method.
-// Arguments are the actual values passed into a function when it is called. When a function is called,
-// the parameters are initialized with the values of the function call's arguments.
-
+// Inherited class
+class Child extends Parent {
+    // This method overrides show() of Parent
+    @Override
+    void show()
+    {
+        System.out.println("Child's show()");
+    }
+}
+// Driver class
+class main {
+    public static void main(String[] args)
+    {
+        Parent obj1 = new Parent();
+        obj1.show();
+        Parent obj2 = new Child();
+        obj2.show();
+    }
+}
